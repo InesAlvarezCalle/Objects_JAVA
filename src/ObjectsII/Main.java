@@ -114,6 +114,31 @@ public class Main {
                 Alumno a2 = new Alumno();
                 Alumno a3 = new Alumno();
 
+                System.out.println("Datos del primer alumno: ");
+
+                leerAlumno(a1);
+                leerAlumno(a2);
+                leerAlumno(a3);
+
+                imprimirAlumno(a1);
+                imprimirAlumno(a2);
+                imprimirAlumno(a3);
+
+                a3 = copiaAlumno(a1);
+                imprimirAlumno(a3);
+
+                if (igualAlumno(a1, a2)) {
+                    System.out.println("El alumno 1 y el alumno 2 son iguales.");
+                } else {
+                    System.out.println("El alumno 1 y el alumno 2 no son iguales.");
+                }
+
+                if (igualAlumno(a1, a3)) {
+                    System.out.println("El alumno 1 y el alumno 3 son iguales.");
+                } else {
+                    System.out.println("El alumno 1 y el alumno 3 no son iguales.");
+                }
+
             } else if (opcion != 0){
                 System.out.println("ERROR: Valor introducido no válido.");
             }
@@ -127,6 +152,10 @@ public class Main {
         a.curso = Leer.leerEntero("Dame el curso del alumno: ");
     }
 
+    //De esta manera, ambos métodos pueden implementarse en la clase Alumno sin inconvenientes,
+    //ya que solo requieren un argumento. Simplemente sería cuestión de copiarlos y pegarlos dentro
+    //de la clase.
+
     public static void imprimirAlumno (Alumno al){
         System.out.println("--DATOS DEL ALUMNO--");
         System.out.println("Número: " + al.num);
@@ -135,11 +164,14 @@ public class Main {
         System.out.println("Curso: " + al.curso);
     }
 
-    public static void copiaAlumno(Alumno origen, Alumno destino){
-        destino = new Alumno(origen);
+    public static Alumno copiaAlumno(Alumno a) {
+        a = new Alumno(a);
+        return a;
     }
-
-    public static void igualAlumno(Alumno a1, Alumno a2){
-
+    public static boolean igualAlumno(Alumno a1, Alumno a2) {
+        return a1.num == a2.num &&
+                a1.nombre == a2.nombre &&
+                a1.edad == a2.edad &&
+                a1.curso == a2.curso;
     }
 }
