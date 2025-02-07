@@ -114,8 +114,6 @@ public class Main {
                 Alumno a2 = new Alumno();
                 Alumno a3 = new Alumno();
 
-                System.out.println("Datos del primer alumno: ");
-
                 leerAlumno(a1);
                 leerAlumno(a2);
                 leerAlumno(a3);
