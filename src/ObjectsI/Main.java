@@ -13,38 +13,35 @@ public class Main {
             opcion = Leer.leerEntero("Introduzca la opción que desea utilizar: ");
 
             if (opcion == 1){
-                Punto p1 = new Punto();
-                Punto p2 = new Punto();
-                Punto p3 = new Punto();
+                Punto p1 = new Punto(5, 0);
+                Punto p2 = new Punto(10, 10);
+                Punto p3 = new Punto(-3, 7);
 
-                p1.x = 5;
-                p1.y = 0;
+                System.out.println("Las coordenadas del punto 1 son: ");
+                p1.mostrar();
+                System.out.println("Las coordenadas del punto 1 son: ");
+                p2.mostrar();
+                System.out.println("Las coordenadas del punto 1 son: ");
+                p3.mostrar();
 
-                p2.x = 10;
-                p2.y = 10;
+                p1.desplaza(6, true);
+                p1.desplaza(4, false);
 
-                p3.x = -3;
-                p3.y = 7;
+                p2.desplaza(9, true);
+                p2.desplaza(2, false);
 
-                System.out.println("Las coordenadas del punto 1 son: " + p1.x + " " + p1.y + ".");
-                System.out.println("Las coordenadas del punto 1 son: " + p2.x + " " + p2.y + ".");
-                System.out.println("Las coordenadas del punto 1 son: " + p3.x + " " + p3.y + ".");
-
-                p1.x += 3;
-                p1.y -= 9;
-
-                p2.x *= 5;
-                p2.y += 2;
-
-                p3.x *= 5;
-                p3.y -= 2;
+                p3.desplaza(1, true);
+                p3.desplaza(5, false);
 
                 System.out.println("-----------------------------------------------");
                 System.out.println("COORDENADAS ACTUALES:");
                 System.out.println("-----------------------------------------------");
-                System.out.println("Las coordenadas del punto 1 son: " + p1.x + " " + p1.y + ".");
-                System.out.println("Las coordenadas del punto 1 son: " + p2.x + " " + p2.y + ".");
-                System.out.println("Las coordenadas del punto 1 son: " + p3.x + " " + p3.y + ".");
+                System.out.println("Las coordenadas del punto 1 son: ");
+                p1.mostrar();
+                System.out.println("Las coordenadas del punto 2 son: ");
+                p2.mostrar();
+                System.out.println("Las coordenadas del punto 3 son: ");
+                p3.mostrar();
 
             } else if (opcion == 2) {
                 Persona per1 = new Persona();
