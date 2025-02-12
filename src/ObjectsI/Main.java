@@ -53,8 +53,16 @@ public class Main {
                 p3.mostrar();
 
             } else if (opcion == 2) {
-                Persona per1 = new Persona("53882133X", "Inés", "Álvarez Calle", 20);
-                Persona per2 = new Persona("Sergi", 18);
+                Persona per1 = new Persona();
+                Persona per2 = new Persona();
+
+                per1.setDni("53882133X");
+                per1.setNombre("Inés");
+                per1.setApellidos("Álvarez Calle");
+                per1.setEdad(20);
+
+                per2.setNombre("Sergi");
+                per2.setEdad(18);
 
                 per1.mostrar();
                 per2.mostrar();

@@ -1,10 +1,17 @@
 package ObjectsI;
 
 public class Persona {
-    String dni;
-    String nombre;
-    String apellidos;
-    int edad;
+    private String dni;
+    private String nombre;
+    private String apellidos;
+    private int edad;
+
+    public Persona(){
+        dni = "";
+        nombre = "";
+        apellidos = "";
+        edad = 0;
+    }
 
     public Persona(String dni, String nombre, String apellidos, int edad){
         this.dni = dni;
@@ -22,7 +29,7 @@ public class Persona {
         return dni;
     }
 
-    public void setDni(){
+    public void setDni(String dni){
         this.dni = dni;
     }
 
@@ -30,7 +37,7 @@ public class Persona {
         return nombre;
     }
 
-    public void setNombre(){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
@@ -38,7 +45,7 @@ public class Persona {
         return apellidos;
     }
 
-    public void setApellidos(){
+    public void setApellidos(String apellidos){
         this.apellidos = apellidos;
     }
 
@@ -46,7 +53,7 @@ public class Persona {
         return edad;
     }
 
-    public void setEdad(){
+    public void setEdad(int edad){
         this.edad = edad;
     }
 
