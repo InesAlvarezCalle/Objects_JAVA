@@ -13,9 +13,18 @@ public class Main {
             opcion = Leer.leerEntero("Introduzca la opción que desea utilizar: ");
 
             if (opcion == 1){
-                Punto p1 = new Punto(5, 0);
-                Punto p2 = new Punto(10, 10);
-                Punto p3 = new Punto(-3, 7);
+                Punto p1 = new Punto();
+                Punto p2 = new Punto();
+                Punto p3 = new Punto();
+
+                p1.setX(5);
+                p1.setY(0);
+
+                p2.setX(10);
+                p2.setY(10);
+
+                p3.setX(-3);
+                p3.setY(7);
 
                 System.out.println("Las coordenadas del punto 1 son: ");
                 p1.mostrar();
